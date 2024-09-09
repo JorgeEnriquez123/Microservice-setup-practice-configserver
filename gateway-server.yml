@@ -4,15 +4,6 @@ spring:
       discovery:
         locator:
           enabled: true
-      routes:
-        - id: inventory
-          uri: lb://INVENTORY
-          predicates:
-            - Path=/api/inventory/**
-        - id: orders
-          uri: lb://ORDERS
-          predicates:
-            - Path=/api/orders/**
 eureka:
   instance:
     prefer-ip-address: true
